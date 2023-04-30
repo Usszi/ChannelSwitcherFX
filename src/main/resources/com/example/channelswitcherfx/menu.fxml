@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.channelswitcherfx.MenuBar">
+
+    <MenuBar prefHeight="25.0" prefWidth="600.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="Show all channels">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ShowAll" text="Enter" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Show active channels">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ShowActive" text="Enter" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Show inactive channels">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ShowInactive" text="Enter" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Change a state of a channel">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ShowChanger" text="Enter" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+</AnchorPane>

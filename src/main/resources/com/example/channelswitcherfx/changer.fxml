@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="563.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.channelswitcherfx.Changer">
+   <children>
+      <Label layoutX="192.0" layoutY="27.0" prefHeight="53.0" prefWidth="295.0" text="Channel Changer">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutY="389.0" prefHeight="195.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="225.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="246.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="129.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="4.0" prefHeight="4.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="4.0" prefHeight="4.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="4.0" prefHeight="4.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#Return" prefHeight="25.0" prefWidth="151.0" text="Return" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#changer" prefHeight="25.0" prefWidth="99.0" text="Change" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="185.0" text="Set Channel status:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="change" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER_RIGHT" contentDisplay="BOTTOM" prefHeight="20.0" prefWidth="121.0" text="Curret id:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <fx:include source="menu.fxml" />
+      <TableView fx:id="channelsTableView" layoutY="123.0" onMouseClicked="#rowClicked" prefHeight="310.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="IdTableColumn" minWidth="0.0" prefWidth="107.0" text="ID" />
+            <TableColumn fx:id="nameTableColumn" minWidth="0.0" prefWidth="311.0" text="Name" />
+            <TableColumn fx:id="statusTableColumn" prefWidth="181.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label alignment="CENTER_RIGHT" layoutY="96.0" prefHeight="20.0" prefWidth="222.0" text="Pick a channel you want to edit:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
